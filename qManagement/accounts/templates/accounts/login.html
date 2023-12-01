@@ -1,0 +1,59 @@
+{% extends 'accounts/base.html' %}
+{% load static %}
+{% block landing %}
+
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container">
+    <a class="navbar-brand" href="#">
+      <img src="{% static 'images/logomain.png' %}" height="50" alt="logo">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </div>
+</nav>
+
+<div class="container text-center">
+    <div class="d-flex align-items-center justify-content-center" style="height: 90vh;">
+         <div class="d-block" style="width: 400px;">
+             <h1>Welcome!</h1>
+             <br/>
+             <form method="POST" action="">
+                {% csrf_token %}
+                 <div class="form-floating mb-3">
+                  <input type="text" name="username"  class="form-control" id="floatingInput" placeholder="Username">
+                  <label for="floatingInput">Username</label>
+                </div>
+                 <div class="form-floating mb-3">
+                  <input type="password"  name="password"  class="form-control" id="floatingPassword" placeholder="Username">
+                  <label for="floatingPassword">Password</label>
+
+                 <div class="d-flex justify-content-end">
+                     <a href="{% url 'reset_password' %}" class="text-warning text-decoration-none fw-medium">Forgot Password?</a>
+                 </div>
+                </div>
+                <div class="d-grid gap-2 col-6 mx-auto">
+                    <input class="btn btn-warning text-white" type="submit" value="Login">
+                </div>
+            </form>
+              <div class="mt-4">
+                    <div class="d-flex justify-content-center links">
+                        Don't have account? &nbsp<a href="" data-bs-toggle="modal" data-bs-target="#modalUserType"  class="ml-2">Sign Up</a>
+                    </div>
+              </div>
+             <br/>
+             {% for message in messages %}
+                     <div class="alert alert-danger" role="alert">
+                      {{message}}
+                    </div>
+             {% endfor %}
+         </div>
+
+
+    </div>
+</div>
+
+{% for message in messages %}
+					<p id='messages'>{{message}}</p>
+				{% endfor %}
+{% endblock %}
