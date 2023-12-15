@@ -60,7 +60,7 @@ def loginPage(request):
 @unauthenticated_user
 def registerStudent(request):
     form = CreateStudentForm()
-    if request.method =='POST':
+    if request.method == 'POST':
         form = CreateStudentForm(request.POST)
         if form.is_valid():
             user = form.save()

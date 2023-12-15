@@ -4,31 +4,15 @@
 
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container">
-    <a class="navbar-brand" href="#">
+    <a class="navbar-brand" href="{% url 'landing' %}">
       <img src="{% static 'images/logomain.png' %}" height="50" alt="logo">
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Dropdown
-          </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-          </ul>
-        </li>
+      <ul class="navbar-nav me-auto">
+
       </ul>
       <form class="d-flex" role="search">
         <a href="{% url 'login' %}" class="btn btn-light me-2 border border-rounded">Login</a>
@@ -38,4 +22,94 @@
   </div>
 </nav>
 
+<div id="myCarousel" class="carousel slide mb-6 h-100" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="" aria-label="Slide 1" style="background-color: #e7cb00 !important;"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2" class="active" aria-current="true"  style="background-color: #e7cb00 !important;"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3" class=""  style="background-color: #e7cb00 !important;"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div class="carousel-caption text-start text-dark fs-5" style="width: 600px;">
+          <div class="rec"> </div><h1>Empower Your Quiz Management</h1>
+            <p>Say goodbye to the hassle of traditional quiz management and hello to success. Our intuitive online quiz management platform allows you to create and customize quizzes in minutes.</p>
+            <p><a class="btn btn-lg btn-warning text-white" href="{% url 'login' %}">Create your first class</a></p>
+        </div>
+          <img class="d-block .img-fluid w-100" src="{% static 'images/slider-img1.jpg' %}" alt="First slide">
+      </div>
+      <div class="carousel-item">
+          <img class="d-block .img-fluid w-100" src="{% static 'images/slider-img2a.jpg' %}" alt="First slide">
+          <div class="carousel-caption text-start text-dark fs-5"  style="width: 600px;">
+            <div class="rec"> </div><h1>Unleash the Power of Online Quizzes</h1>
+            <p>With our user-friendly online quiz platform, businesses and individuals can effortlessly create and manage engaging quizzes.</p>
+            <p><a class="btn btn-lg btn-warning text-white" href="{% url 'login' %}">Enroll now</a></p>
+          </div>
+
+      </div>
+      <div class="carousel-item">
+        <div class="carousel-caption text-start text-dark fs-5" style="width: 600px;">
+          <div class="rec"> </div><h1>Unlock the Power of Knowledge with Our Engaging Quizzes</h1>
+            <p>Our innovative online quiz platform provides an engaging and interactive way to enhance your learning journey. Effortlessly access and take quizzes from one central location. </p>
+            <p><a class="btn btn-lg btn-warning text-white" data-bs-toggle="modal" data-bs-target="#modalUserType"  >Join us</a></p>
+        </div>
+          <img class="d-block .img-fluid w-100" src="{% static 'images/slider-img3.jpg' %}" alt="First slide">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev" >
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+
+    <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+<div class="container px-4 py-5" id="featured-3">
+    <h2 class="pt-5 text-center text-warning">Things you can do</h2>
+    <p class=" text-center ">Manage and take your quizzes as easy as it should be</p>
+    <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+      <div class="feature col">
+        <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-warning bg-gradient fs-2 mb-3 p-3 rounded">
+          <svg fill="#fff" height="1em" width="1em" viewBox="0 0 640 512"><path d="M128 32C92.7 32 64 60.7 64 96V352h64V96H512V352h64V96c0-35.3-28.7-64-64-64H128zM19.2 384C8.6 384 0 392.6 0 403.2C0 445.6 34.4 480 76.8 480H563.2c42.4 0 76.8-34.4 76.8-76.8c0-10.6-8.6-19.2-19.2-19.2H19.2z"/></svg>
+        </div>
+        <h4 class="fs-4 text-body-emphasis">Take Quiz Online</h4>
+        <p> Discover and unlock hidden knowledge through engaging online quizzes. Challenge yourself and improve your skills in various subjects, or test your expertise in your preferred area of interest. </p>
+
+      </div>
+      <div class="feature col">
+        <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-warning bg-gradient fs-2 mb-3 p-3 rounded">
+          <svg fill="#fff" height="1em" width="1em" viewBox="0 0 640 512"><path d="M48 48h88c13.3 0 24-10.7 24-24s-10.7-24-24-24H32C14.3 0 0 14.3 0 32V136c0 13.3 10.7 24 24 24s24-10.7 24-24V48zM175.8 224a48 48 0 1 0 0-96 48 48 0 1 0 0 96zm-26.5 32C119.9 256 96 279.9 96 309.3c0 14.7 11.9 26.7 26.7 26.7h56.1c8-34.1 32.8-61.7 65.2-73.6c-7.5-4.1-16.2-6.4-25.3-6.4H149.3zm368 80c14.7 0 26.7-11.9 26.7-26.7c0-29.5-23.9-53.3-53.3-53.3H421.3c-9.2 0-17.8 2.3-25.3 6.4c32.4 11.9 57.2 39.5 65.2 73.6h56.1zm-89.4 0c-8.6-24.3-29.9-42.6-55.9-47c-3.9-.7-7.9-1-12-1H280c-4.1 0-8.1 .3-12 1c-26 4.4-47.3 22.7-55.9 47c-2.7 7.5-4.1 15.6-4.1 24c0 13.3 10.7 24 24 24H408c13.3 0 24-10.7 24-24c0-8.4-1.4-16.5-4.1-24zM464 224a48 48 0 1 0 0-96 48 48 0 1 0 0 96zm-80-32a64 64 0 1 0 -128 0 64 64 0 1 0 128 0zM504 48h88v88c0 13.3 10.7 24 24 24s24-10.7 24-24V32c0-17.7-14.3-32-32-32H504c-13.3 0-24 10.7-24 24s10.7 24 24 24zM48 464V376c0-13.3-10.7-24-24-24s-24 10.7-24 24V480c0 17.7 14.3 32 32 32H136c13.3 0 24-10.7 24-24s-10.7-24-24-24H48zm456 0c-13.3 0-24 10.7-24 24s10.7 24 24 24H608c17.7 0 32-14.3 32-32V376c0-13.3-10.7-24-24-24s-24 10.7-24 24v88H504z"/></svg>
+        </div>
+        <h4 class="fs-4 text-body-emphasis">Create a Class</h4>
+        <p>Empower your students with an engaging learning experience.  Stay connected with your students and monitor their progress to provide personalized support and enhance their learning experience.</p>
+
+      </div>
+      <div class="feature col">
+        <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-warning bg-gradient fs-2 mb-3 p-3 rounded">
+          <svg fill="#fff" height="1em" width="1em" viewBox="0 0 512 512"><path d="M64 64c0-17.7-14.3-32-32-32S0 46.3 0 64V400c0 44.2 35.8 80 80 80H480c17.7 0 32-14.3 32-32s-14.3-32-32-32H80c-8.8 0-16-7.2-16-16V64zm406.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L320 210.7l-57.4-57.4c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L240 221.3l57.4 57.4c12.5 12.5 32.8 12.5 45.3 0l128-128z"/></svg>
+        </div>
+        <h4 class="fs-4 text-body-emphasis">Manage Results</h4>
+        <p>Analyze, interpret, and act on the results of your quizzes to drive student engagement and enhance learning outcomes. Leverage reporting tools to visualize performance data and assess the effectiveness of your quizzes. </p>
+
+      </div>
+    </div>
+  </div>
+
+<hr class="footer-hr"/>
+      <div class="footer">
+        <div class="container">
+        <div class="row d-flex justify-content-between align-items-center">
+          <div class="col-auto d-block justify-content-center align-items-center">
+              <p class ="mb-0 pb-0">Jerry S. Ale</p>
+              <p>Master in Information Technology 1</p>
+          </div>
+          <div class="col-auto d-flex justify-content-center align-items-center">
+              <p>Cebu Institute of Technology University - CIT U</p>
+          </div>
+          </div>
+        </div>
+
+      </div>
 {% endblock %}

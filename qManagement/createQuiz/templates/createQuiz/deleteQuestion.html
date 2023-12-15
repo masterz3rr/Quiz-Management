@@ -1,0 +1,22 @@
+{% extends 'accounts/main.html' %}
+
+{% block content %}
+<div class="row">
+  <div class="col-md-6">
+    <div class="card card-body">
+        <p>Are you sure you want to delete "{{item.qName}}" ?</p>
+         <form action="{% url 'deleteQuestion' item.questionID %}" method="POST">
+          {% csrf_token %}
+          <a href="{% url 'quizSet' quiz.quizID %}" class ="btn btn-sm btn-secondary">Cancel</a>
+
+          <input type="submit" name="Confirm" class="btn btn-sm btn-danger">
+        </form>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+
+
+
+

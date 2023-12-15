@@ -1,0 +1,44 @@
+{% extends 'accounts/main.html' %}
+
+{% block content %}
+<br>
+<div class="row">
+  <div class="col-md-12">
+    <div class="card card-body">
+      <form action="" method="POST">
+            {% csrf_token %}
+          <div class="modal-body">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">Edit class info</h1>
+              <br>
+                <div class="form-floating mb-3 col-12">
+                  <input type="text" name="className" class="form-control" id="floatingInput1" placeholder="Class Name" value="{{classData.className}}">
+                  <label for="floatingInput1">Class Name</label>
+                </div>
+                <div class="form-floating mb-3 col-12">
+                  <input type="text" name="subject"  class="form-control" id="floatingInput2" placeholder="Subject" value="{{classData.subject}}">
+                  <label for="floatingInput2">Subject</label>
+                </div>
+                <div class="form-floating mb-3 col-12">
+                  <input type="text" name="section"  class="form-control" id="floatingInput3" placeholder="Section" value="{{classData.section}}">
+                  <label for="floatingInput3">Section</label>
+                </div>
+                <div class="form-floating mb-3 col-12">
+                  <input type="text" name="enrollKey"  class="form-control" id="floatingInput4" placeholder="Enrollment Key" value="{{classData.enrollKey}}">
+                  <label for="floatingInput4">Enrollment Key</label>
+                </div>
+              <div class="mt-2">
+                <a href="{% url 'classInfo' classData.classID %}" class ="btn btn-secondary">Cancel</a>
+                <button type="submit" class="btn btn-warning text-white">Update</button>
+              </div>
+
+          </div>
+        </form>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+
+
+
+

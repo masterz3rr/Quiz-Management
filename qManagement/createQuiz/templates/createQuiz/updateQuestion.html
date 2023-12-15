@@ -1,0 +1,79 @@
+{% extends 'accounts/main.html' %}
+
+{% block content %}
+<br>
+<div class="row">
+  <div class="col-md-12">
+    <div class="card card-body">
+      <form action="{% url 'updateQuestion' item.questionID %}" method="POST">
+            {% csrf_token %}
+          <div class="modal-body">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">Update question</h1>
+              <br>
+                <div class="form-floating mb-3 col-12">
+                  <input type="text" name="question" class="form-control" id="floatingInput1" placeholder="Topic Name" value="{{item.qName}}">
+                  <label for="floatingInput1">Quiz Name</label>
+                </div>
+                <div class="form-floating mb-3 col-12">
+                  <input type="text" name="description"  class="form-control" id="floatingInput2" placeholder="Description" value="{{item.qDescription}}">
+                  <label for="floatingInput2">Description</label>
+                </div>
+                <h5>Choices</h5>
+                <div class="form-floating mb-3 col-6">
+                  <input type="text" name="cA"  class="form-control" id="floatingInput3" placeholder="Choice A" value="{{item.choiceA}}">
+                  <label for="floatingInput3">Choice A</label>
+                </div>
+                <div class="form-floating mb-3 col-6">
+                  <input type="text" name="cB"  class="form-control" id="floatingInput4" placeholder="Choice B" value="{{item.choiceB}}">
+                  <label for="floatingInput4">Choice B</label>
+                </div>
+                <div class="form-floating mb-3 col-6">
+                  <input type="text" name="cC"  class="form-control" id="floatingInput5" placeholder="Choice C" value="{{item.choiceC}}">
+                  <label for="floatingInput5">Choice C</label>
+                </div>
+                <div class="form-floating mb-3 col-6">
+                  <input type="text" name="cD"  class="form-control" id="floatingInput6" placeholder="Choice D" value="{{item.choiceD}}">
+                  <label for="floatingInput6">Choice D</label>
+                </div>
+
+                <div class="form-floating w-50">
+                  <select name="answer" class="form-select" id="floatingSelect">
+                    <option value="A"
+                            {% if item.answer == 'A' %}
+                              selected
+                            {% endif %}
+                    >A</option>
+                    <option value="B"
+                            {% if item.answer == 'B' %}
+                              selected
+                            {% endif %}
+                    >B</option>
+                    <option value="C"
+                            {% if item.answer == 'C' %}
+                              selected
+                            {% endif %}
+                    >C</option>
+                    <option value="D"
+                            {% if item.answer == 'D' %}
+                              selected
+                            {% endif %}
+                    >D</option>
+                    </select>
+                  <label for="floatingSelect">Choose the correct answer</label>
+                </div>
+              <div class="mt-2">
+                <a href="{% url 'quizSet' quiz.quizID %}" class ="btn btn-secondary">Cancel</a>
+                <button type="submit" class="btn btn-warning text-white">Update</button>
+              </div>
+
+          </div>
+        </form>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+
+
+
+

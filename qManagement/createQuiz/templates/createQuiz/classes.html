@@ -1,0 +1,40 @@
+{% extends 'accounts/main.html' %}
+
+{% block content %}
+
+
+<br/>
+<nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="{% url 'homeTeacher' %}">Home</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Classes</li>
+  </ol>
+</nav>
+<div class="container">
+    <div class="grid-container">
+        <a href="{% url 'createClass' %}" class="classGrid grid-item bg-warning py-3 d-flex align-items-center justify-content-center text-white fs-4 pointer text-decoration-none rounded-4">
+             <div class="me-2"><i class="fa fa-plus"></i></div> <br>
+             <div class="ml-2">Create Class</div>
+        </a>
+
+        {% if results %}
+            {% for row in results %}
+                <a href="{% url 'classInfo' row.0 %}" class= " pointer" style="text-decoration: none;">
+                    <div class="classGrid grid-item bg-warning py-3 rounded-4">
+                        <h4 class="my-0 text-white">{{row.1}}</h4>
+                        <p class="my-0 text-dark">{{row.2}}</p>
+                        <p class="my-0 text-dark">{{row.3}}</p>
+                    </div>
+                </a>
+            {% endfor %}
+        {% else %}
+            <tr>
+                <td colspan="4">No results found.</td>
+            </tr>
+        {% endif %}
+
+    </div>
+</div>
+
+
+{% endblock %}

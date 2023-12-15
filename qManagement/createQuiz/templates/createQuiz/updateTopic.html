@@ -1,0 +1,37 @@
+{% extends 'accounts/main.html' %}
+
+{% block content %}
+<br>
+<div class="row">
+  <div class="col-md-12">
+    <div class="card card-body">
+      <form action="" method="POST">
+            {% csrf_token %}
+          <div class="modal-body">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">Edit Topic info</h1>
+              <br>
+                <div class="form-floating mb-3 col-12">
+                  <input type="text" name="tName" class="form-control" id="floatingInput1" placeholder="Class Name" value="{{topicData.topicName}}">
+                  <label for="floatingInput1">Class Name</label>
+                </div>
+                <div class="form-floating mb-3 col-12">
+                  <input type="text" name="tDescription"  class="form-control" id="floatingInput2" placeholder="Subject" value="{{topicData.topicDescription}}">
+                  <label for="floatingInput2">Subject</label>
+                </div>
+
+              <div class="mt-2">
+                <a href="{% url 'topicInfo' topicData.topicID %}" class ="btn btn-secondary">Cancel</a>
+                <button type="submit" class="btn btn-warning text-white">Update</button>
+              </div>
+
+          </div>
+        </form>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+
+
+
+
