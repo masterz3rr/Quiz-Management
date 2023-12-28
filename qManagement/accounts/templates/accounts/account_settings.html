@@ -32,29 +32,38 @@
 				        {% csrf_token %}
                         <p>
                             <label for="id_firstname">Name:</label>
-                            <input type="text" name="firstname" value="student A" class="form-control" required="" id="id_firstname">
+                            <input type="text" name="firstname" value="{{request.user.teacher.firstname}}" class="form-control" required="" id="id_firstname">
                         </p>
                         <p>
                             <label for="id_lastname">Lastname:</label>
-                            <input type="text" name="lastname" value="lastname" class="form-control" required="" id="id_lastname">
+                            <input type="text" name="lastname" value="{{request.user.teacher.lastname}}" class="form-control" required="" id="id_lastname">
                         </p>
                         <p>
                             <label for="fileInput">User email:</label>
-                            <input type="email" name="user_email" value="ajerry24141@gmail.com" class="form-control" maxlength="320">
+                            <input type="email" name="user_email" value="{{request.user.email}}" class="form-control" maxlength="320">
                         </p>
                         <p>
                             <label for="id_phone">Phone:</label>
-                            <input type="text" name="phone" value="123132" class="form-control" required="" id="id_phone">
+                            <input type="text" name="phone" value="{{request.user.teacher.phone}}" class="form-control" required="" id="id_phone">
                         </p>
                         <p>
                             <label for="fileInput">Current profile picture:</label><span class="text-warning fw-medium" style="font-size:12px;"> {{ form.profile_pic.value }}</span>
                             <input type="file" name="profile_pic" id="fileInput" class="form-control mb-0" accept="image/*">
 
                         </p>
-            			<input class="btn btn-primary" type="submit" name="Update Information">
+            			<input class="btn btn-warning text-white" type="submit" name="Update Information">
 				    </form>
 
                     <div id="profile-pic-preview"></div>
+                        {% if 'success' in message.tags %}
+                            <div class="alert alert-success" role="alert">
+                             {{message}}
+                            </div>
+                        {% elif 'info' in message.tags %}
+                            <div class="alert alert-info" role="alert">
+                             {{message}}
+                            </div>
+                        {% endif %}
                 </div>
             </div>
         </div>

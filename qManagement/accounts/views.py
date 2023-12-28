@@ -92,7 +92,9 @@ def registerTeacher(request):
             user.groups.add(group)
             Teacher.objects.create(
                 user=user,
-                name=user.username,
+                firstname="Firstname",
+                lastname="Lastname",
+                phone="",
             )
 
             messages.success(request, 'Account created: ' + username)
@@ -114,6 +116,7 @@ def accountSettings(request):
             if form.is_valid():
                 teacher = form.save()
                 email = form.cleaned_data['user_email']
+                print(email)
                 User.objects.filter(id=user.id).update(email=email)
                 messages.info(request, 'Data successfully saved')
 
@@ -130,6 +133,7 @@ def accountSettings(request):
                 email = form.cleaned_data['user_email']
                 User.objects.filter(id=user.id).update(email=email)
                 messages.info(request, 'Data successfully saved')
-
-    context = {'form': form, 'email': email}
+                messages.error(request, 'Error in saving data')
+                messages.success(request, 'Data successfully saved')
+    context = {'form': form}
     return render(request, 'accounts/account_settings.html', context)

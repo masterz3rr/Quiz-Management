@@ -45,6 +45,7 @@ def createClassPage(request):
             result = cursor.fetchall()
             msg = result[0][0]
             cursor.close()
+            return redirect('classPage')
         else:
             print("error in form")
 

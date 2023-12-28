@@ -21,11 +21,11 @@
              <form method="POST" action="">
                 {% csrf_token %}
                  <div class="form-floating mb-3">
-                  <input type="text" name="username"  class="form-control" id="floatingInput" placeholder="Username">
+                  <input type="text" name="username"  class="form-control" id="floatingInput" placeholder="Username" required>
                   <label for="floatingInput">Username</label>
                 </div>
                  <div class="form-floating mb-3">
-                  <input type="password"  name="password"  class="form-control" id="floatingPassword" placeholder="Username">
+                  <input type="password"  name="password"  class="form-control" id="floatingPassword" placeholder="Username" required>
                   <label for="floatingPassword">Password</label>
 
                  <div class="d-flex justify-content-end">
@@ -43,17 +43,19 @@
               </div>
              <br/>
              {% for message in messages %}
-                     <div class="alert alert-danger" role="alert">
-                      {{message}}
+                {% if 'success' in message.tags %}
+                    <div class="alert alert-success" role="alert">
+                     {{message}}
                     </div>
-             {% endfor %}
+                {% elif 'info' in message.tags %}
+                    <div class="alert alert-info" role="alert">
+                     {{message}}
+                    </div>
+                {% endif %}
+            {% endfor %}
          </div>
-
-
     </div>
 </div>
 
-{% for message in messages %}
-					<p id='messages'>{{message}}</p>
-				{% endfor %}
 {% endblock %}
+

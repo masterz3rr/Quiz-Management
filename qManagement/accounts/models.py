@@ -7,11 +7,13 @@ class Teacher(models.Model):
     firstname = models.CharField(max_length=200, null=True)
     lastname = models.CharField(max_length=200, null=True)
     phone = models.CharField(max_length=200, null=True)
-    profile_pic = models.ImageField(default="profiledefault.jpg", null=True, blank=True)
+    profile_pic = models.ImageField(default="profiledefault.png", null=True, blank=True)
     date_created = models.DateTimeField(auto_now_add=True, null=True)
 
     def __str__(self):
-        return self.lastname + ', ' + self.firstname
+        fname = self.firstname
+        lname = self.lastname
+        return "{}, {}".format(lname, fname)
 
 
 class Student(models.Model):

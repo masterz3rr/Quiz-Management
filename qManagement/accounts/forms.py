@@ -77,7 +77,7 @@ class StudentForm(ModelForm):
     )
 
     firstname = forms.CharField(
-        label='Name',
+        label='First Name',
         widget=forms.TextInput(
             attrs={
                 'class': 'form-control',

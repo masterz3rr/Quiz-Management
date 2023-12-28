@@ -1,11 +1,16 @@
 {% extends 'accounts/main.html' %}
+{% load static %}
 
 {% block content %}
 
-
-<br/>
-
-<a href="{% url 'classPage' %}">Go to Classes</a>
+<div class="container-fluid" >
+    <img class="d-block .img-fluid w-100" src="{% static 'images/mainclass.jpg' %}" alt="First slide"/>
+    <div class="d-block text-center">
+        <h2 class="fs-2 text-dark">Welcome to Quizzbee</h2>
+        <p class="fs-6 text-secondary fst-italic">Get started by creating a class</p>
+        <a href="{% url 'classPage' %}" class="btn btn-warning text-white btn-sm">Go to Classes</a>
+    </div>
+</div>
 
 
 {% endblock %}

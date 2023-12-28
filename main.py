@@ -6,6 +6,7 @@
 
 # setup installed app and database in settings.py
 # create database
+# py manage.py makemigrations
 # py manage.py migrate
 # py manage.py runserver
 
