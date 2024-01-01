@@ -1,6 +1,6 @@
 # Quiz management
  
-This web application is written with django, a high-level Python web framework that encourages rapid development and clean, pragmatic design, that is used to create quizzes and manage the entire process in an online setting. Much more like of any other quiz management tools such as codechum, google form, kahoot where a teacher can manage his/her quizzes from creation to student result data analytics(student scores/turn out). See screenshots for the overview of the project.
+This web application is written with django, a high-level Python web framework that encourages rapid development and clean, pragmatic design, that is used to create quizzes and manage the entire process in an online setting. This tool empowers teachers to be quiz masters, offering a complete workflow from designing quizzes to extracting insights from student scores and participation data. It's like Google Forms, Kahoot and CodeChum.
 
 To showcase my skills in web development and mastery of Python's Django framework, I created this web app for my Web Information Systems class. It demonstrates:
 - Implementing different user types and access levels using Django's built-in User Model and Groups functionality.
