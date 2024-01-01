@@ -6,3 +6,4 @@ To showcase my skills in web development and mastery of Python's Django framewor
 - Implementing different user types and access levels using Django's built-in User Model and Groups functionality.
 - Utilizing both Django's default database capabilities and MySQL-specific features like stored procedures and custom views for flexible data management.
 - Designing a user-friendly and responsive frontend interface driven by Bootstrap 5.
+- implementing forgot password feature using SMTP
