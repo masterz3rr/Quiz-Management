@@ -2,40 +2,29 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="780105e4-bb5c-4681-881b-5918386124ce" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/qManagement.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qManagement/accounts/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/qManagement/accounts/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qManagement/accounts/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/qManagement/accounts/migrations/0002_student.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/qManagement/accounts/migrations/0003_remove_student_email_remove_student_name_and_more.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/qManagement/accounts/migrations/0004_alter_student_profile_pic.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/qManagement/accounts/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/qManagement/accounts/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/qManagement/enrollment/templates/enrollment/enrollClassInfo.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/qManagement/enrollment/templates/enrollment/studentClassView.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/qManagement/enrollment/templates/enrollment/studentExam.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/qManagement/static/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/qManagement/accounts/templates/accounts/account_settings.html" beforeDir="false" afterPath="$PROJECT_DIR$/qManagement/accounts/templates/accounts/account_settings.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qManagement/accounts/templates/accounts/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/qManagement/accounts/templates/accounts/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qManagement/accounts/templates/accounts/dashboard_student.html" beforeDir="false" afterPath="$PROJECT_DIR$/qManagement/accounts/templates/accounts/dashboard_student.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qManagement/accounts/templates/accounts/dashboard_teacher.html" beforeDir="false" afterPath="$PROJECT_DIR$/qManagement/accounts/templates/accounts/dashboard_teacher.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qManagement/accounts/templates/accounts/landing.html" beforeDir="false" afterPath="$PROJECT_DIR$/qManagement/accounts/templates/accounts/landing.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qManagement/accounts/templates/accounts/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/qManagement/accounts/templates/accounts/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qManagement/accounts/templates/accounts/navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/qManagement/accounts/templates/accounts/navbar.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qManagement/accounts/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/qManagement/accounts/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qManagement/createQuiz/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/qManagement/createQuiz/migrations/0002_topiclist.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/qManagement/createQuiz/migrations/0003_quizlist.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/qManagement/createQuiz/migrations/0004_questionset.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/qManagement/accounts/templates/accounts/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/qManagement/accounts/templates/accounts/main.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/qManagement/createQuiz/templates/createQuiz/classes.html" beforeDir="false" afterPath="$PROJECT_DIR$/qManagement/createQuiz/templates/createQuiz/classes.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qManagement/createQuiz/templates/createQuiz/createClass.html" beforeDir="false" afterPath="$PROJECT_DIR$/qManagement/createQuiz/templates/createQuiz/createClass.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qManagement/createQuiz/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/qManagement/createQuiz/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qManagement/enrollment/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/qManagement/enrollment/templates/enrollment/studentPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/qManagement/enrollment/templates/enrollment/studentPage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/qManagement/enrollment/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/qManagement/enrollment/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/qManagement/enrollment/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/qManagement/enrollment/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -51,9 +40,10 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/aleje/OneDrive/Documents/GitHub/CCS630SeminarExam&quot;
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Masterzerr&quot;
   }
 }</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />

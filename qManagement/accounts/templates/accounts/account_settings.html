@@ -32,11 +32,24 @@
 				        {% csrf_token %}
                         <p>
                             <label for="id_firstname">Name:</label>
-                            <input type="text" name="firstname" value="{{request.user.teacher.firstname}}" class="form-control" required="" id="id_firstname">
+                            {% for group in request.user.groups.all %}
+                              {% if group.name == 'teacher' %}
+                                  <input type="text" name="firstname" value="{{request.user.teacher.firstname}}" class="form-control" required="" id="id_firstname">
+                              {% elif group.name == 'student' %}
+                                  <input type="text" name="firstname" value="{{request.user.student.firstname}}" class="form-control" required="" id="id_firstname">
+                              {% endif %}
+                            {% endfor %}
                         </p>
                         <p>
                             <label for="id_lastname">Lastname:</label>
-                            <input type="text" name="lastname" value="{{request.user.teacher.lastname}}" class="form-control" required="" id="id_lastname">
+                             {% for group in request.user.groups.all %}
+                              {% if group.name == 'teacher' %}
+                                 <input type="text" name="lastname" value="{{request.user.teacher.lastname}}" class="form-control" required="" id="id_lastname">
+                              {% elif group.name == 'student' %}
+                                  <input type="text" name="lastname" value="{{request.user.student.lastname}}" class="form-control" required="" id="id_lastname">
+                              {% endif %}
+                            {% endfor %}
+
                         </p>
                         <p>
                             <label for="fileInput">User email:</label>
@@ -44,7 +57,15 @@
                         </p>
                         <p>
                             <label for="id_phone">Phone:</label>
-                            <input type="text" name="phone" value="{{request.user.teacher.phone}}" class="form-control" required="" id="id_phone">
+                            {% for group in request.user.groups.all %}
+                              {% if group.name == 'teacher' %}
+                                 <input type="text" name="phone" value="{{request.user.teacher.phone}}" class="form-control" required="" id="id_phone">
+                              {% elif group.name == 'student' %}
+                                  <input type="text" name="phone" value="{{request.user.student.phone}}" class="form-control" required="" id="id_phone">
+                              {% endif %}
+                            {% endfor %}
+
+
                         </p>
                         <p>
                             <label for="fileInput">Current profile picture:</label><span class="text-warning fw-medium" style="font-size:12px;"> {{ form.profile_pic.value }}</span>

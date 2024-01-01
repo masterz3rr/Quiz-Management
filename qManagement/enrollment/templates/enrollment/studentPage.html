@@ -11,16 +11,17 @@
   </ol>
 </nav>
 <div class="container">
+    <h2>My Classes</h2>
     <div class="grid-container">
-        <h2>My Classes</h2>
+
 
         {% if results %}
             {% for row in results %}
-                <a href="{% url 'classInfo' row.0 %}" class= " pointer" style="text-decoration: none;">
+                <a href="{% url 'studentClassView' row.0 %}" class= " pointer" style="text-decoration: none;">
                     <div class="classGrid grid-item bg-warning py-3 rounded-4">
                         <h4 class="my-0 text-white">{{row.1}}</h4>
-                        <p class="my-0 text-dark">{{row.2}}</p>
-                        <p class="my-0 text-dark">{{row.3}}</p>
+                        <p class="my-0 text-dark">{{row.2|truncatechars:65}}</p>
+                        <p class="my-0 text-dark fw-medium">Section: {{row.3}}</p>
                     </div>
                 </a>
             {% endfor %}
@@ -33,8 +34,26 @@
     <hr>
     <div class="row">
         <h2>Enroll Classes</h2>
+        <div class="grid-container">
+            {% if resultList %}
+            {% for row in resultList %}
+                <a href="{% url 'enrollClassInfo' row.0 %}" class= " pointer" style="text-decoration: none;">
+                    <div class="classGrid grid-item bg-warning py-3 rounded-4">
+                        <h4 class="my-0 text-white">{{row.1}}</h4>
+                        <p class="my-0 text-dark">{{row.2|truncatechars:60}}</p>
+                        <p class="my-0 text-dark">Section: {{row.3}}</p>
+                    </div>
+                </a>
+            {% endfor %}
+        {% else %}
+            <tr>
+                <td colspan="4">No results found.</td>
+            </tr>
+        {% endif %}
+        </div>
     </div>
 </div>
+
 
 
 {% endblock %}
